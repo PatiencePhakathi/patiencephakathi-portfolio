@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,80 +6,43 @@
 
 @layer base {
   :root {
-    --background: 40 20% 97%;
-    --foreground: 30 10% 12%;
+    --background: 222 47% 6%;
+    --foreground: 210 30% 96%;
 
-    --card: 40 25% 95%;
-    --card-foreground: 30 10% 12%;
+    --card: 222 40% 9%;
+    --card-foreground: 210 30% 96%;
 
-    --popover: 40 20% 97%;
-    --popover-foreground: 30 10% 12%;
+    --popover: 222 40% 9%;
+    --popover-foreground: 210 30% 96%;
 
-    --primary: 30 8% 18%;
-    --primary-foreground: 40 20% 97%;
+    --primary: 214 100% 60%;
+    --primary-foreground: 222 47% 6%;
 
-    --secondary: 35 18% 90%;
-    --secondary-foreground: 30 10% 12%;
+    --primary-glow: 199 95% 60%;
 
-    --muted: 35 12% 92%;
-    --muted-foreground: 30 6% 50%;
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 30% 96%;
 
-    --accent: 24 70% 55%;
-    --accent-foreground: 40 20% 97%;
+    --muted: 222 25% 12%;
+    --muted-foreground: 215 15% 65%;
 
-    --destructive: 0 65% 52%;
-    --destructive-foreground: 40 20% 97%;
+    --accent: 14 100% 60%;
+    --accent-foreground: 210 30% 96%;
 
-    --border: 35 15% 88%;
-    --input: 35 15% 88%;
-    --ring: 30 8% 18%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 210 30% 96%;
+
+    --border: 222 25% 18%;
+    --input: 222 25% 14%;
+    --ring: 214 100% 60%;
 
     --radius: 0.75rem;
 
-    --success: 145 50% 42%;
-    --success-foreground: 40 20% 97%;
-
-    --warning: 38 90% 55%;
-    --warning-foreground: 30 10% 12%;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 30 8% 8%;
-    --foreground: 40 15% 90%;
-    --card: 30 8% 12%;
-    --card-foreground: 40 15% 90%;
-    --popover: 30 8% 10%;
-    --popover-foreground: 40 15% 90%;
-    --primary: 40 15% 90%;
-    --primary-foreground: 30 8% 8%;
-    --secondary: 30 6% 18%;
-    --secondary-foreground: 40 15% 90%;
-    --muted: 30 6% 18%;
-    --muted-foreground: 30 8% 55%;
-    --accent: 24 70% 55%;
-    --accent-foreground: 40 20% 97%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 30 6% 20%;
-    --input: 30 6% 20%;
-    --ring: 40 15% 90%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --gradient-hero: linear-gradient(135deg, hsl(214 100% 60% / 0.15), hsl(199 95% 60% / 0.05) 50%, transparent 80%);
+    --gradient-text: linear-gradient(135deg, hsl(214 100% 70%), hsl(199 95% 70%));
+    --gradient-card: linear-gradient(160deg, hsl(222 40% 11%) 0%, hsl(222 40% 8%) 100%);
+    --shadow-glow: 0 0 60px hsl(214 100% 60% / 0.25);
+    --shadow-card: 0 20px 50px -20px hsl(222 80% 4% / 0.8);
   }
 }
 
@@ -87,12 +50,30 @@
   * {
     @apply border-border;
   }
-
+  html { scroll-behavior: smooth; }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, hsl(214 100% 60% / 0.15), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 80%, hsl(199 95% 60% / 0.08), transparent);
+    background-attachment: fixed;
   }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em; }
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
+  .glow { box-shadow: var(--shadow-glow); }
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
 }
