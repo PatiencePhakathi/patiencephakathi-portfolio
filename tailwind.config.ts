@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["DM Sans", "sans-serif"],
-        serif: ["Playfair Display", "serif"],
+        sans: ["Inter", "sans-serif"],
+        display: ["Space Grotesk", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -100,7 +101,6 @@ export default {
         "fade-in": "fade-in 0.3s ease-out",
       },
     },
-  },
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
