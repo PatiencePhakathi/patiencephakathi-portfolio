@@ -146,7 +146,7 @@ const Index = () => {
           </div>
           <div className="lg:col-span-2 space-y-5 text-muted-foreground leading-relaxed text-lg">
             <p>
-              I'm a final-year Information Technology student at Cape Peninsula University of Technology, specializing in Applications Development. My focus is on bridging full-stack engineering with modern cloud and AI tooling.
+              I'm an Information Technology graduate from Cape Peninsula University of Technology, specializing in Applications Development. I work across full-stack engineering, cloud, data, and AI tooling.
             </p>
             <p>
               During my Work Integrated Learning year at <span className="text-foreground">Plum Systems</span> in Cape Town, I built responsive, mobile-first websites, contributed to client requirement gathering, and applied accessibility and performance best practices in production code.
