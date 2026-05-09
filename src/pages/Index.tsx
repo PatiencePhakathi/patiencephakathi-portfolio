@@ -39,6 +39,12 @@ const projects = [
     description: "Elective coursework exploring sensor networks, embedded systems, and cloud-connected device telemetry.",
     tech: ["Python", "MQTT", "OCI"],
   },
+  {
+    title: "Plum Systems Web Builds",
+    tag: "Client Work",
+    description: "Responsive, mobile-first websites delivered during WIL — emphasizing accessibility and performance.",
+    tech: ["HTML", "CSS", "JavaScript"],
+  },
 ];
 
 const Index = () => {
@@ -81,7 +87,7 @@ const Index = () => {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-secondary/50 text-xs font-mono text-muted-foreground mb-6">
               <span className="w-2 h-2 rounded-full bg-[hsl(145_60%_50%)] animate-pulse" />
-              Available for opportunities — South Africa
+              Available for opportunities — Johannesburg, ZA
             </div>
             <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.05] mb-6">
               Patience Phakathi.
@@ -91,7 +97,7 @@ const Index = () => {
               Cloud AI Specialist.
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
-              An IT graduate and versatile technologist building across <span className="text-foreground">full-stack development</span>, <span className="text-foreground">cloud</span>, <span className="text-foreground">data</span>, and <span className="text-foreground">AI</span> — driven by curiosity and a commitment to solving real-world problems.
+              A motivated IT graduate from Cape Peninsula University of Technology with a strong foundation in software development and data analytics. Passionate about using <span className="text-foreground">Oracle Cloud Infrastructure</span> and <span className="text-foreground">Generative AI</span> to solve real-world problems.
             </p>
             <div className="flex flex-wrap gap-3">
               <a href="#projects" className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-medium hover:opacity-90 transition glow">
@@ -146,7 +152,7 @@ const Index = () => {
           </div>
           <div className="lg:col-span-2 space-y-5 text-muted-foreground leading-relaxed text-lg">
             <p>
-              I'm an Information Technology graduate from Cape Peninsula University of Technology, specializing in Applications Development. I work across full-stack engineering, cloud, data, and AI tooling.
+              I'm a final-year Information Technology student at Cape Peninsula University of Technology, specializing in Applications Development. My focus is on bridging full-stack engineering with modern cloud and AI tooling.
             </p>
             <p>
               During my Work Integrated Learning year at <span className="text-foreground">Plum Systems</span> in Cape Town, I built responsive, mobile-first websites, contributed to client requirement gathering, and applied accessibility and performance best practices in production code.
@@ -221,12 +227,12 @@ const Index = () => {
               </div>
             </div>
             <div className="grid md:grid-cols-[200px_1fr] gap-6 p-6 rounded-2xl border border-border bg-card">
-              <div className="font-mono text-sm text-muted-foreground">Graduated 2026</div>
+              <div className="font-mono text-sm text-muted-foreground">Expected Apr 2026</div>
               <div>
                 <h3 className="font-display text-2xl font-semibold">Diploma in Information Technology</h3>
                 <div className="text-xs font-mono text-primary mt-1 mb-4">Cape Peninsula University of Technology · Applications Development</div>
                 <p className="text-muted-foreground">
-                  Key modules: Application Development Practice & Theory, IoT (elective), Information Systems, Project, Project Management, Professional Practice.
+                  Final-year modules: Application Development Practice & Theory, IoT (elective), Information Systems, Project, Project Management, Professional Practice.
                 </p>
               </div>
             </div>
@@ -263,7 +269,7 @@ const Index = () => {
       </section>
 
       <footer className="px-6 py-8 border-t border-border text-center text-xs font-mono text-muted-foreground">
-        © 2026 Patience Phakathi ·
+        © 2026 Patience Phakathi · Crafted with care.
       </footer>
     </div>
   );
